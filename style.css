@@ -1,0 +1,22 @@
+#heading {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 25px;
+}
+
+#inputs {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1 {
+  text-decoration: underline;;
+}
+
+#info {
+  padding-top: 25px;
+  font-family: 'Roboto Condensed', sans-serif;
+  height: auto;
+  width: 450px;
+  border-style: solid;
+  border-color: black;
+  border-width: thin;
+}
