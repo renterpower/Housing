@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Housing Power</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="tooltip.css">
+  </head>
+
+  <body>
+    <div id = 'heading'>
+      <h2> <b> Apartment Information Worksheet </b> </h2>
+    </div>
+
+    <div id = 'inputs'>
+      <h1>Record Address </h1>
+      <p><input type='text' id='theInput' placeholder='Enter Street Address'/>
+      <input type='button' onclick='recordAddress()' value='Enter'/></p>
+
+      <h1>Record PIN </h1>
+      <p2><div class="tooltip">What is a PIN?
+          <span class="tooltiptext">PIN, also known as a Tax ID Number, is...</span></p2>
+      <p>How do I find the PIN</p>
+      </div>
+      <p><input type='text' id='theInput' placeholder='Enter PIN Number' />
+      <input type='button' onclick='recordPIN()' value='Enter'/>
+
+      <h1>Record Owner of Building </h1>
+      <p>How do I find who owns the building?</p>
+      <p>What is it lists an LLC?</p>
+      <p2><div class="tooltip">What is an LLC?
+          <span class="tooltiptext">An LLC is fihfiewhfwhefwe, landlords often use them....</span></p2>
+      </div>
+      <p><input type='text' id='theInput' placeholder='Enter PIN Number' />
+      <input type='button' onclick='recordPIN()' value='Enter'/>
+    </div>
+
+    <div id = 'info'>
+      <p1> Your Information <p1/>
+      <p><b>Street Address: </b> <span id='address'></span></p>
+      <p><b>You wrote: </b> <span id='pin'></span></p>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- jQuery local fallback -->
+    <script>window.jQuery || document.write('<script src="js/jquery-3.2.0.min.js"><\/script>')</script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS local fallback -->
+    <script>if(typeof($.fn.modal) === 'undefined') {document.write('<script src="js/bootstrap.min.js"><\/script>')}</script>
+    <!-- Bootstrap CSS local fallback -->
+    <div id="bootstrapCssTest" class="hidden"></div>
+    <script>
+      $(function() {
+        if ($('#bootstrapCssTest').is(':visible')) {
+          $("head").prepend('<link rel="stylesheet" href="css/bootstrap.min.css">');
+        }
+      });
+    </script>
+    <script type="text/javascript">
+      function recordAddress (){
+      	var formInput = document.getElementById('theInput').value;
+      	document.getElementById('address').innerHTML = formInput;
+      }
+
+      function recordPIN (){
+      	var formInput = document.getElementById('theInput').value;
+      	document.getElementById('pin').innerHTML = formInput;
+      }
+    </script>
+  </body>
+</html>
