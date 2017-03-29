@@ -12,13 +12,28 @@
   </head>
 
   <body>
+  <!-- Heading -->
     <div id = 'heading'>
-      <h2> <b> Apartment Information Worksheet </b> </h2>
+      <h2> <b>Apartment Information Worksheet</b> </h2>
     </div>
 
+<!--Address Input Form -->
     <div id = 'inputs'>
       <h1>Record Address </h1>
-      <p><input type='text' id='theInput' placeholder='Enter Street Address'/>
+      <p>
+
+      <input type='text' id='StreetNo' placeholder='Enter Street NO'/> 
+      
+     
+      <select id='Dir'> 
+      <option>Street Direction</option>
+      <option>N</option>
+      <option>E</option>
+      <option>W</option>
+      <option>S</option>
+      
+      <input type='text' id='Street' placeholder='Enter Street Name'/>
+
       <input type='button' onclick='recordAddress()' value='Enter'/></p>
 
       <h1>Record PIN </h1>
@@ -39,6 +54,7 @@
       <input type='button' onclick='recordPIN()' value='Enter'/>
     </div>
 
+<!--- Form -->
     <div id = 'info'>
       <p1> Your Information <p1/>
       <p><b>Street Address: </b> <span id='address'></span></p>
