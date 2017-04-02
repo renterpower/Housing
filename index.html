@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Housing Power</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!--link rel="stylesheet" type="text/css" href="tooltip.css"-->
   </head>
@@ -45,20 +45,12 @@
           </section>
           <section id="step-1">
             <h2>Step 1: Input Address to obtain PIN</h2>
-            <div class="form-inline">
-                <label class="sr-only" for="street-num">Street Number: </label>
-                <input class="form-control" type='text' id='street-num' placeholder='Enter NO'/>
-                <label class="sr-only" for="street-dir">Street Direction: </label>
-                <select class="form-control" id='street-dir'>
-                  <option value="">Dir</option>
-                  <option value="N">N</option>
-                  <option value="E">E</option>
-                  <option value="W">W</option>
-                  <option value="S">S</option>
-                </select>
-                <label class="sr-only" for="street-name">Street Name: </label>
-                <input class="form-control" type='text' id='street-name' placeholder='Enter Street Name'/>
-                <button class="btn btn-default" type='submit'>Enter</button>
+            <div class="form-horizontal">
+              <fieldset class="input-group">
+                <label class="sr-only" for="addressAutocomplete">Address: </label>
+                <input class="form-control" type='text' id='addressAutocomplete' placeholder='Enter your building address'/>
+              </fieldset>
+              <div id="url" class="hidden"></div>
             </div>
             <div class="well">
               <h3>What is a PIN?</h3>
@@ -115,21 +107,22 @@
         </div>
       </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- jQuery local fallback -->
-    <script>window.jQuery || document.write('<script src="js/jquery-3.2.0.min.js"><\/script>')</script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript">window.jQuery || document.write('<script src="js/jquery-3.2.0.min.js"><\/script>')</script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- Bootstrap JS local fallback -->
-    <script>if(typeof($.fn.modal) === 'undefined') {document.write('<script src="js/bootstrap.min.js"><\/script>')}</script>
+    <script type="text/javascript">if(typeof($.fn.modal) === 'undefined') {document.write('<script src="js/bootstrap.min.js"><\/script>')}</script>
     <!-- Bootstrap CSS local fallback -->
     <div id="bootstrapCssTest" class="hidden"></div>
     <script type="text/javascript">
       $(function() {
         if ($('#bootstrapCssTest').is(':visible')) {
-          $("head").prepend('<link rel="stylesheet" href="css/bootstrap.min.css">');
+          $("head").prepend('<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">');
         }
       });
     </script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuy4F4hxOZ91UVgBmydjIy5JX7nTrQhPs&libraries=places" async defer></script>
     <script src="js/app.js" type="text/javascript"></script>
   </body>
 </html>
